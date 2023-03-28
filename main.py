@@ -8,7 +8,14 @@ def encode(password):
         result += str((int(char) + 3))
     stored = int(result)
 
-
+def decode(encodeed_password):
+    global stored
+    encoded_password = str(stored)
+    password = ''
+    for digit in encoded_password:
+        decoded_digit = (int(digit) - 3) % 10
+        password += str(decoded_digit)
+    return password
 
 
 if __name__ == "__main__":
