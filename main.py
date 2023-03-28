@@ -8,7 +8,7 @@ def encode(password):
         result += str((int(char) + 3))
     stored = int(result)
 
-def decode(encodeed_password):
+def decode(encoded_password):
     global stored
     encoded_password = str(stored)
     password = ''
